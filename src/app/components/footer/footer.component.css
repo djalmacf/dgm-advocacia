@@ -1,0 +1,23 @@
+* {
+    background-color: black !important;
+    border: none !important;
+}
+
+footer  {
+    position: relative;
+    margin-top: auto;
+    bottom: 0;
+}
+
+footer p {
+    margin-top: auto !important;
+    border: none !important;
+}
+
+.nav-link {
+    color: #ffdd57 !important;
+}
+
+.text-center {
+    color: #ffdd57;
+}

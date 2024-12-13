@@ -1,0 +1,71 @@
+<!-- contact-form.component.html -->
+<div id="contato">
+    <div class="contact-form-container">
+  
+        <div class="titulo-form">
+          <h2>Contate-nos:</h2>
+          <p>Envie-nos suas dúvidas, sugestões ou reclamações.</p>
+          <p>Ficaremos muito felizes em atendê-lo!</p>
+        </div>
+  
+      <div class="form-img">
+        <img src="fundo.avif" alt="Advocacia"/>
+      </div>
+  
+      <form class="contact-form" (ngSubmit)="onSubmit()">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" [(ngModel)]="name" name="name" required />
+  
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required />
+        <span *ngIf="emailError" style="color: red;">{{ emailError }}</span>
+  
+        <label for="subject">Assunto:</label>
+        <input type="text" id="subject" [(ngModel)]="subject" name="subject" required />
+  
+        <label for="phone">Número de Celular:</label>
+        <input type="tel" id="phone" [(ngModel)]="phone" name="phone" placeholder="(DD) 9XXXX-XXXX" required />
+        <span *ngIf="phoneError" style="color: red;">{{ phoneError }}</span>
+  
+        <label for="message">Mensagem:</label>
+        <textarea id="message" [(ngModel)]="message" name="message" required></textarea>
+  
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  
+    <div *ngIf="formSubmitted" class="popup-overlay">
+      <div class="popup">
+        <p>Formulário enviado com sucesso! Entraremos em contato em breve.</p>
+        <button (click)="closePopup()">Fechar</button>
+      </div>
+    </div>
+  </div>
+    
+  <div class="footer-1">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Contato</h3>
+        <p>E-mail: contato&#64;dgm.com</p>
+        <p>Telefone: (61) 98765-4321</p>
+      </div>
+      <div class="footer-section">
+        <h3>Horário de Funcionamento</h3>
+        <p>Segunda a Sexta: 08:00 - 18:00</p>
+        <p>Sábado: 08:00 - 12:00</p>
+        <p>Domingo: Fechado</p>
+      </div>
+      <div class="footer-section">
+        <h3>Localização</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15354.733573927253!2d-48.0697127!3d-15.8206397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3391b366fc47%3A0x88c16b784a3ad98f!2sSenai%20Taguatinga!5e0!3m2!1spt-BR!2sbr!4v1731680527934!5m2!1spt-BR!2sbr" 
+        width="300" 
+        height="200" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+    </div>
+  </div>  
+

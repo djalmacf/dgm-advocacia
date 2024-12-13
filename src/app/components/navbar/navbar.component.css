@@ -1,0 +1,78 @@
+* {
+    color: #ffdd57 !important;
+    background-color: black !important;
+}
+
+.nav-item-login {
+    font-size: 20px;
+    margin-right: 10px;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #ffdd57;
+    font-weight: bold;
+}
+
+.nav-item-login a {
+    color: #ffdd57 !important;
+    padding: 5px;
+}
+
+.nav-item-login:hover a {
+    background-color: #ffdd57 !important;
+    color: black !important;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.nav-item-login a:hover {
+    color:black !important;
+    background-color: #ffdd57 !important;;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: var(--bs-body-color);
+}
+
+.dropdown-menu:hover {
+    cursor: pointer;
+}
+
+.container-fluid {
+    padding: 0;
+    gap: 5px;
+    margin-right: 150px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 3;
+}
+
+.container-fluid img {
+    max-height: 50px;
+    cursor: pointer;
+    align-items: left;
+}
+
+.navbar-brand {
+    color: #ffdd57;
+    font-family: 'Titillium Web', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    flex-grow: 1;
+    margin-right: 20px;
+    justify-content: right;
+    gap: 20px;
+}
+
+.redes-sociais a {
+    color: #ffdd57;
+    font-size: 25px; /* Ajuste o tamanho do ícone */
+  }
