@@ -1,5 +1,4 @@
 /* contact-form.component.css */
-
 .contact-form-container {
     position: relative;
     display: flex;
@@ -166,6 +165,7 @@
   text-align: center;
   font-size: 0.9rem;
   padding-top: 50px;
+  border: none;
 }
 
 .footer-content {

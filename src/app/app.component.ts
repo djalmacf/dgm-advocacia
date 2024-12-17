@@ -18,7 +18,7 @@ import { AuthService } from './autenticacao/auth.service';
 
 export class AppComponent {
   // Primeiro Projeto completo em Angular 19 - Turma SENAI
-  title = 'Projeto Angular Advocacia';
+  title = 'DGM Advocacia';
 
   http = inject(HttpClient);
 

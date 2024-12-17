@@ -10,7 +10,7 @@ import { AuthService } from '../../autenticacao/auth.service';
   templateUrl: './login.component.html', 
   styleUrls: ['./login.component.css'], 
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule, ],
+  imports: [RouterLink, ReactiveFormsModule,],
 })
 
 export class LoginComponent {

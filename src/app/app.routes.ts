@@ -10,6 +10,7 @@ import { DashboardAuthGuard } from './autenticacao/auth.guard';
 import { FaqComponent } from './pages/faq/faq.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { CrudComponent } from './pages/crud/crud.component';
+import { RecuperarSenhaComponent } from './pages/recuperar-senha/recuperar-senha.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent}, // Rota raiz
@@ -22,5 +23,6 @@ export const routes: Routes = [
     { path: 'client', component: ClientComponent},
     { path: 'faq', component: FaqComponent},
     { path: 'politicas', component: PoliticasComponent},
-    { path: 'crud', component: CrudComponent}
+    { path: 'crud', component: CrudComponent},
+    { path: 'recuperar-senha', component: RecuperarSenhaComponent}
 ]

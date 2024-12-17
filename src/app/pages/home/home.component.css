@@ -103,8 +103,15 @@
     cursor: pointer;
   }  
 
-.container {
+.container .carousel-caption {
     text-align: justify;
+    justify-content: center;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .carousel-item {
@@ -122,22 +129,24 @@
 
 /* Ajuste de texto para a legenda */
 .carousel-caption {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     bottom: 20px; /* Distância do fundo */
     left: 50%;
     transform: translateX(-50%);
     color: white; /* Cor do texto */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto para melhor legibilidade */
-    padding: 0 10px; /* Espaçamento horizontal */
-    max-width: 90%; /* Limita a largura máxima do texto */
+    max-width: 100%; /* Limita a largura máxima do texto */
+    max-height: 100%;
     text-align: center; /* Alinha o texto ao centro */
+    align-items: center;
 }
 
 /* Ajustando o tamanho da fonte do título e do parágrafo */
 .carousel-caption h1 {
-    font-size: 1.1rem; /* Ajuste o tamanho conforme necessário */
+    font-size: 1.2rem; /* Ajuste o tamanho conforme necessário */
     font-weight: 600; /* Deixa o título em negrito */
-    margin-bottom: 10px; /* Espaço abaixo do título */
     text-align: center;
     color: #ffdd57;
 }
@@ -145,7 +154,6 @@
 .carousel-caption p {
     font-size: 1.0rem; /* Ajuste o tamanho conforme necessário */
     opacity: 0.75; /* Opacidade do texto */
-    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
     text-align: center;
 }
 
@@ -350,11 +358,16 @@ body{
 }
 
 /* ============= Responsive Ipad ==================== */
-@media (max-width: 992px) {
+@media (max-width: 1400px) {
  .creative-cards .container .row .card-column {
     flex: 0 0 auto;
     width: 50%;
     margin-bottom: 40px;
+}
+
+.card-details {
+    justify-content: center;
+    align-items: center;
 }
 }
 
@@ -373,4 +386,26 @@ body{
     opacity: 1;
     visibility: visible;
 }
+}
+
+@media (max-width: 760px) {
+    .creative-cards .container .row .card-column {
+       flex: 0 0 auto;
+       width: 100%;
+       margin-bottom: 20px;
+   }
+}
+
+@media (max-width: 900px) {
+    .carousel-caption h1 {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.7rem;
+    }
+
+    .carousel-caption p a {
+       font-size: 0.8rem;
+   }
 }
