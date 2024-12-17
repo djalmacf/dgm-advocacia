@@ -80,10 +80,16 @@
 
 @media (max-width: 1200px) {
 
+    .container-fluid {
+        margin-right: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .navbar {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .navbar-toggler-icon {
