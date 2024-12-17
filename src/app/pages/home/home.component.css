@@ -358,7 +358,7 @@ body{
 }
 
 /* ============= Responsive Ipad ==================== */
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
  .creative-cards .container .row .card-column {
     flex: 0 0 auto;
     width: 50%;
