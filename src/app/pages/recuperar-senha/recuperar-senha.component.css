@@ -116,7 +116,20 @@ html, body {
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
+
+  .bottom-text p a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .bottom-text p a:hover {
+    cursor: pointer;
+    color: #ffdd57;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
   .bottom-text a:hover {
     color: #ffdd57;
   }
