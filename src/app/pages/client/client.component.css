@@ -19,18 +19,24 @@ body {
   
   .about-us h2 {
     font-size: 2rem;
-    color: #000000;
-    text-align: center;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px #ffdd57;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
   }
   
   .about-us h3 {
     font-size: 1.5rem;
-    color: #000000;
-    text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px #ffdd57;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
   }
   
   .about-us p {
@@ -46,41 +52,29 @@ body {
     margin-bottom: 50px;
   }
   
+  .parallax {
+    background-image: url('https://i.pinimg.com/736x/a6/ad/d0/a6add09b322cf78e304c6cc4b8b374d7.jpg');
+    height: 250px; /* Altura do parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.5);
+  }
+
   .titulo-equipe {
-    width: auto;
-    max-width: 600px;
-    margin: 0 auto;
-    align-items: center;
-    text-align: center;
-    padding: 10px 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 50px;
     text-transform: uppercase;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: 500;
-    color: #00000080;
-    text-shadow: 2px 2px 4px #ffdd57;
-    background: transparent;
-    cursor: pointer;
-    box-shadow: transparent;
-    border: 1px solid #ffffff80;
-    transition: 0.5s ease;
-    user-select: none;
+    margin-bottom: 30px;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
   }
-  
-  .titulo-equipe h2 {
-    color: #000;
-  }
-  
-  .titulo-equipe:hover,
-  :focus {
-    color: #000000;
-    background: #ffdd57;
-    border: 1px solid #ffdd57;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #ffdd57, 0 0 20px #ffdd57, 0 0 50px #ffdd57,
-      0 0 100px #ffdd57;
-  }
-  
+
+
   .desc-equipe {
     display: flex;
     gap: 50px;
