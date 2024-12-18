@@ -357,6 +357,10 @@ body{
     cursor: pointer;
 }
 
+.container .row {
+    margin-bottom: 20px;
+}
+
 /* ============= Responsive Ipad ==================== */
 @media (max-width: 1200px) {
  .creative-cards .container .row .card-column {
@@ -449,6 +453,7 @@ body {
     position: relative;
     display: inline-block;
     text-decoration: none;
+    margin-bottom: 50px;
 }
 
 .team-page .team-title a {
