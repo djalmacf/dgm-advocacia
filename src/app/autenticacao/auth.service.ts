@@ -2,7 +2,6 @@ import { inject, Injectable } from "@angular/core";
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, signOut, updateProfile } from "@angular/fire/auth";
 import { Router } from "@angular/router";
 import { from, Observable, BehaviorSubject } from "rxjs";
-
 @Injectable ({
     providedIn: 'root'
 })
