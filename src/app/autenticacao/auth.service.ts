@@ -1,7 +1,7 @@
 import { inject, Injectable } from "@angular/core";
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, signOut, updateProfile } from "@angular/fire/auth";
 import { Router } from "@angular/router";
-import { from, Observable } from "rxjs";
+import { from, Observable, BehaviorSubject } from "rxjs";
 
 @Injectable ({
     providedIn: 'root'
@@ -11,6 +11,10 @@ export class AuthService {
 
     firebaseAuth = inject(Auth)
     router = inject(Router); // Adicionado para navegação
+
+     // BehaviorSubject para emitir o estado de login
+    private _isLoggedIn = new BehaviorSubject<boolean>(this.isLoggedIn()); // Inicializa com o estado do login atual
+    isLoggedIn$: Observable<boolean> = this._isLoggedIn.asObservable(); // Torna o estado de login observável
 
     // Lógica para registrar novo usuário no Firebase
     register(email: string, username: string, password: string):Observable<void> {
@@ -34,17 +38,11 @@ export class AuthService {
         return from(promise);
     }
 
-    forgetPassword(email: string): Observable<void> {
-        const promise = sendPasswordResetEmail(
-            this.firebaseAuth,
-            email
-        ).then(() => {});
-        return from(promise);
-    }
 
      // Realiza o logout
      logout(): Observable<void> {
-      const promise = signOut(this.firebaseAuth).then(() => {
+      const promise = signOut(
+            this.firebaseAuth).then(() => {
           localStorage.removeItem('authToken'); // Remove o token de autenticação
           this.router.navigate(['/login']); // Redireciona para a página de login
       });
@@ -55,6 +53,11 @@ export class AuthService {
   isLoggedIn(): boolean {
     return !!localStorage.getItem('authToken');
   }
-  
 
+  
+  forgetPassword(email: string): Observable<void> {
+    const promise = sendPasswordResetEmail(this.firebaseAuth,email).then(() => {});
+    return from(promise);
+}
+  
 }

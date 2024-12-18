@@ -7,7 +7,7 @@ import { AuthService } from '../../autenticacao/auth.service';
 @Component({
   selector: 'app-recuperar-senha',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './recuperar-senha.component.html',
   styleUrl: './recuperar-senha.component.css'
 })

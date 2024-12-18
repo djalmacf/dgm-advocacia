@@ -21,11 +21,19 @@ export class AppComponent {
   title = 'DGM Advocacia';
 
   http = inject(HttpClient);
-
+  isLoggedIn: boolean = false;
 
   constructor(private authService: AuthService) {}
+  ngOnInit(): void {
+    // Subscreve ao estado de login para atualizar a interface
+    this.authService.isLoggedIn$.subscribe((isLoggedIn: boolean) => {
+      this.isLoggedIn = isLoggedIn;
+    });
+  }
 
   logout(): void {
-    this.authService.logout();
-  }
+    this.authService.logout().subscribe(() => {
+      console.log('Usuário desconectado com sucesso');
+    });
+}
 }
