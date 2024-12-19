@@ -8,6 +8,10 @@ nav ul {
     gap: 5px;
 }
 
+#nav-item-adm {
+  display: none;
+}
+
 .nav-item-login {
     font-size: 20px;
     margin-right: 10px;
@@ -49,7 +53,7 @@ nav ul {
 .container-fluid {
     padding: 0;
     gap: 5px;
-    margin-right: 150px;
+    margin-right: 0px;
     display: flex;
     justify-content: center;
     flex-grow: 3;
@@ -112,7 +116,7 @@ nav ul {
     .navbar-brand {
         font-size: 20px;
     }
-}   
+}
 
 @media (min-width: 1200px) {
     #nav-item-entrar {

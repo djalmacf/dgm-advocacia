@@ -1,13 +1,13 @@
 import { HttpClient, withFetch } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router,} from '@angular/router';
 import { AuthService } from '../../autenticacao/auth.service';
 
 @Component({
   selector: 'app-recuperar-senha',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule,],
   templateUrl: './recuperar-senha.component.html',
   styleUrl: './recuperar-senha.component.css'
 })
@@ -20,7 +20,7 @@ export class RecuperarSenhaComponent {
   form = this.fb.nonNullable.group({
     email: ['', Validators.required],
   });
-  
+
   errorMessage: string | null = null;
   successMessage: string | null = null;
 
@@ -42,4 +42,4 @@ export class RecuperarSenhaComponent {
         }
       );
   }
-}  
+}
